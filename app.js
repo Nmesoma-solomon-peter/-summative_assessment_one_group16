@@ -11,18 +11,33 @@
 
 
 // linking form elements to js variables
-const name = document.querySelector("#fullName");
-const email = document.querySelector("#email");
-const phone = document.querySelector("#phone");
-const linkedin = document.querySelector("#linkedin");
-const coverLetter = document.querySelector("#coverLetter");
-const Salary = document.querySelector("#salary");
+const nameInput = document.querySelector("#fullName");
+const emailInput = document.querySelector("#email");
+// const phoneInput = document.querySelector("#phone");
+// const linkedinInput = document.querySelector("#linkedin");
+// const coverLetterInput = document.querySelector("#coverLetter");
+// const SalaryInput = document.querySelector("#salary");
+const submitBtn = document.querySelector("#submit");
 
 // regex patterns 
-const fullNameRegex = /^[A-Za-z\s]+$/
+const fullNameRegex = /^[A-Za-z]+ [A-Za-z\s]+$/
 const EmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 const phoneRegex = /^(\d{3})-\d{3}-\d{4}$/
 const linkedinRegex = /^https:\/\/www\.linkedin\.com\/[a-zA-Z0-9_-]+$/
 const coverLetterRegex = /^[a-zA-Z0-9\s.,!?]*$/
 const expectedSalarayRegex = /^\d+(\.\d{1,2})?$/
 
+
+submitBtn.addEventListener("click",()=>{
+    let nameInputValue = nameInput.value;
+    if(fullNameRegex.test(nameInputValue)){
+        if(EmailRegex.test(emailInput.value)){
+
+        }else{
+            alert("wrong email format");
+        }
+    }else{
+        alert("name must be in pairs and must not contain special characters or numbers")
+    }
+
+})
