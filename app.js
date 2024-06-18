@@ -19,7 +19,7 @@ const linkedinInput = document.querySelector("#linkedin");
 // const SalaryInput = document.querySelector("#salary");
 const submitBtn = document.querySelector("#submit");
 
-// regex patterns 
+// regex patterns
 const fullNameRegex = /^[A-Za-z]+ [A-Za-z\s]+$/
 const EmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 const phoneRegex = /^(\d{3})-\d{3}-\d{4}$/
@@ -27,10 +27,9 @@ const phoneRegex = /^(\d{3})-\d{3}-\d{4}$/
 const linkedinRegex = /^https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9-]+\//
 const coverLetterRegex = /^[a-zA-Z0-9\s.,!?]*$/
 const expectedSalarayRegex = /^\d+(\.\d{1,2})?$/
-
 https://www.linkedin.com/in/nmesoma-peter-5785b9209/
 
-submitBtn.addEventListener("click",()=>{
+    submitBtn.addEventListener("click",()=>{
     let nameInputValue = nameInput.value;
     if(fullNameRegex.test(nameInputValue)){
         if(EmailRegex.test(emailInput.value)){
@@ -48,6 +47,6 @@ submitBtn.addEventListener("click",()=>{
         }
     }else{
         alert("name must be in pairs and must not contain special characters or numbers")
-    }
+    }
 
 })
