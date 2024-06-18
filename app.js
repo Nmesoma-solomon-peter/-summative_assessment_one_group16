@@ -15,7 +15,7 @@ const nameInput = document.querySelector("#fullName");
 const emailInput = document.querySelector("#email");
 const phoneInput = document.querySelector("#phone");
 const linkedinInput = document.querySelector("#linkedin");
-// const coverLetterInput = document.querySelector("#coverLetter");
+const coverLetterInput = document.querySelector("#coverLetter");
 // const SalaryInput = document.querySelector("#salary");
 const submitBtn = document.querySelector("#submit");
 
@@ -35,7 +35,11 @@ https://www.linkedin.com/in/nmesoma-peter-5785b9209/
         if(EmailRegex.test(emailInput.value)){
             if(phoneRegex.test(phoneInput.value)){
                 if(linkedinRegex.test(linkedinInput.value)){
-
+                   if (coverLetterRegex.test(coverLetterInput.value)) {
+                    
+                   } else {
+                         alert("No special characters required here");
+                   }
                 }else{
                     alert("invalid Url");
                 }
