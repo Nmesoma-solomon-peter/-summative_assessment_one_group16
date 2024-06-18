@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="form-container">
         <h2>Job Application Form</h2>
+        <form id="form">
             <label for="fullName">Full Name:</label><br>
             <input type="text" id="fullName" name="fullName" placeholder="Maureen Mbuvi" required><br>
 
@@ -19,16 +22,20 @@
             <input type="tel" id="phone" name="phone" required placeholder="234-542-9990"><br>
 
             <label for="linkedin">LinkedIn Profile URL:</label><br>
-            <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/username" required><br>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/username"
+                required><br>
 
             <label for="coverLetter">Cover Letter:</label><br>
-            <textarea id="coverLetter" name="coverLetter"  placeholder="No special characters required:text only"></textarea><br>
+            <textarea id="coverLetter" name="coverLetter"
+                placeholder="No special characters required:text only"></textarea><br>
 
-            <!-- <label for="salary">Expected Salary:</label><br>
-            <input type="text" id="salary" name="salary" placeholder="500.00"><br>  -->
+            <label for="salary">Expected Salary:</label><br>
+            <input type="text" id="salary" name="salary" placeholder="500.00"><br>
 
             <input type="submit" id="submit" value="Submit">
+        </form>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
